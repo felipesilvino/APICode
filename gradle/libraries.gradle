@@ -16,49 +16,9 @@ ext.javax = [
 	]
 ]
 
-ext.resteasy = [
-	jaxrs     : "org.jboss.resteasy:resteasy-jaxrs:${resteasyVersion}",
-	guice     : "org.jboss.resteasy:resteasy-guice:${resteasyVersion}",
-	client    : "org.jboss.resteasy:resteasy-client:${resteasyVersion}",
-	multipart : "org.jboss.resteasy:resteasy-multipart-provider:${resteasyVersion}",
-	jackson2  : "org.jboss.resteasy:resteasy-jackson2-provider:${resteasyVersion}"
-]
-
-ext.jersey = [
-	jaxrs     : "javax.ws.rs:jsr311-api:1.1.1",
-	client    : "com.sun.jersey:jersey-client:${jerseyVersion}",
-	core      : "com.sun.jersey:jersey-core:${jerseyVersion}",
-	server    : "com.sun.jersey:jersey-server:${jerseyVersion}",
-	multipart : "com.sun.jersey.contribs:jersey-multipart:${jerseyVersion}",
-	guice     : "com.sun.jersey.contribs:jersey-guice:${jerseyVersion}"
-]
-
-ext.governator = [
-	core  : "com.netflix.governator:governator-core:${governatorVersion}",
-	jetty : "com.netflix.governator:governator-jetty:${governatorVersion}"
-]
-
-ext.jackson2 = [
-	core     : "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}",
-	databind : "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
-	yaml     : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-yaml-provider:${jacksonVersion}",
-	json     : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:${jacksonVersion}",
-	jsr310   : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}",
-	jdk8     : "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonVersion}"
-]
-
 ext.logs = [
 	slf4j  : "org.slf4j:slf4j-api:${sl4fjVersion}",
-	log4j  : "org.slf4j:slf4j-log4j12:${sl4fjVersion}",
 	simple : "org.slf4j:slf4j-simple:${sl4fjVersion}"
-]
-
-ext.cache = [
-	redis : "redis.clients:jedis:${redisVersion}"
-]
-
-ext.utils = [
-	reflections : "io.github.lukehutch:fast-classpath-scanner:1.9.18"
 ]
 
 ext.test = [
@@ -66,9 +26,17 @@ ext.test = [
 	testng : "org.testng:testng:${testngVersion}"
 ]
 
-ext.jdbc = [
-    fluent : [
-        core    : "org.codejargon:fluentjdbc:${fluentjdbcVersion}",
-        persist : "org.codejargon:fluentjdbc-guice-persist:${fluentjdbcVersion}"
-    ]
+ext.data = [
+   h2: "com.h2database:h2:1.4.193"
+]
+
+ext.philips = [
+	boot       : "com.philips.app.tools:philips-boot:${philipsApplicationVersion}",
+	commons    : "com.philips.app.tools:philips-commons:${philipsApplicationVersion}",
+	session    : "com.philips.app.tools:philips-session:${philipsApplicationVersion}",
+	data       : "com.philips.app.tools:philips-data:${philipsApplicationVersion}",
+	resteasy   : [
+		core      : "com.philips.app.tools:philips-resteasy:${philipsApplicationVersion}",
+		multipart : "com.philips.app.tools:philips-resteasy-multipart:${philipsApplicationVersion}"
+	]
 ]
