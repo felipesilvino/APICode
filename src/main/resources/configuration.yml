@@ -1,0 +1,14 @@
+---
+module: "code.example.GuiceModule"
+context: ""
+port: 8084
+sources:
+- name: "db1"
+  dataSourceClass: "org.h2.jdbcx.JdbcDataSource"
+  jdbcUrl: "jdbc:h2:tcp://localhost/mem:db1"
+  username: "sa"
+  password: ""
+  sqlTest: "select 1"
+  maxPoolSize: 50
+  dataSourceProperty:
+    url: "jdbc:h2:tcp://localhost/mem:db1"
