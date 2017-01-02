@@ -30,8 +30,8 @@ public class TableResourcesTest {
     @Inject
     private ServerPort port;
 
-    @Test // 44 ms
-    public void listDatabaseClient(){
+    @Test
+    public void listDatabaseJavaxClient(){
         final Response response = url("databases").request(MediaType.APPLICATION_JSON).get();
         final String expectedValue = "[\"db1\"]";
         final String serverValue = response.readEntity(String.class);
@@ -39,8 +39,8 @@ public class TableResourcesTest {
         assert expectedValue.equals(serverValue);
     }
 
-    @Test // 1s 127ms
-    public void listDatabaseAssured(){
+    @Test
+    public void listDatabaseRestAssured(){
         // https://github.com/rest-assured/rest-assured
         when()
             .get("/databases")
