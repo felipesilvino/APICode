@@ -21,11 +21,6 @@ ext.logs = [
 	simple : "org.slf4j:slf4j-simple:${sl4fjVersion}"
 ]
 
-ext.test = [
-	junit  : "junit:junit:${junitVersion}",
-	testng : "org.testng:testng:${testngVersion}"
-]
-
 ext.data = [
    h2: "com.h2database:h2:1.4.193"
 ]
