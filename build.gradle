@@ -10,7 +10,7 @@ apply from: "${rootDir}/gradle/release.gradle"
 group 'api.code.start'
 
 test {
-    useTestNG()
+    useJUnit()
 }
 
 dependencies {
@@ -27,7 +27,10 @@ dependencies {
     compile ( logs.simple )
     compile ( data.h2 )
 
+    //testCompile ( test.testng )
+    testCompile ( governator.test )
+    testCompile 'io.rest-assured:rest-assured:3.0.1'
+    testCompile 'io.rest-assured:json-path:3.0.1'
 
-    testCompile ( test.testng )
 }
 
