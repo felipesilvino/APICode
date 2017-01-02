@@ -30,6 +30,12 @@ ext.data = [
    h2: "com.h2database:h2:1.4.193"
 ]
 
+ext.governator = [
+	core  : "com.netflix.governator:governator-core:${governatorVersion}",
+	jetty : "com.netflix.governator:governator-jetty:${governatorVersion}",
+	test  : "com.netflix.governator:governator-test-junit:${governatorVersion}"
+]
+
 ext.philips = [
 	boot       : "com.philips.app.tools:philips-boot:${philipsApplicationVersion}",
 	commons    : "com.philips.app.tools:philips-commons:${philipsApplicationVersion}",

@@ -27,7 +27,7 @@ dependencies {
     compile ( logs.simple )
     compile ( data.h2 )
 
-
-    testCompile ( test.testng )
+    //testCompile ( test.testng )
+    testCompile ( governator.test )
 }
 
