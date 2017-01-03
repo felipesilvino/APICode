@@ -1,4 +1,4 @@
-package code.example.database.guice;
+package code.example.database.listener;
 
 import com.google.inject.ProvisionException;
 import com.google.inject.Singleton;
@@ -27,7 +27,7 @@ public class H2Provider implements LifecycleListener {
 
     @Override
     public void onStopped(final Throwable error) {
-        if (server.isRunning(false)) {
+        if (server != null && server.isRunning(false)) {
             server.stop();
         }
     }
