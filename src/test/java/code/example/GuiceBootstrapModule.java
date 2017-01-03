@@ -11,6 +11,7 @@ public class GuiceBootstrapModule implements BootstrapModule {
     @Override
     public void configure(BootstrapBinder binder) {
         binder.install(GuiceModuleTest.loadBootConfig(0).withModules());
+        binder.bind(ServerRequest.class);
     }
 
 }

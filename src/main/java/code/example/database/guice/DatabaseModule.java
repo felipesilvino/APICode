@@ -1,7 +1,9 @@
 package code.example.database.guice;
 
 import code.example.database.DatabaseResources;
-import code.example.database.TableResources;
+import code.example.database.listener.DatabaseScript;
+import code.example.database.listener.H2Provider;
+import code.example.database.DatabaseService;
 import com.google.inject.AbstractModule;
 import com.philips.app.commons.scanner.ScannerFactory;
 import com.philips.app.data.DataModule;
@@ -21,7 +23,7 @@ public class DatabaseModule extends AbstractModule {
     protected void configure() {
         bind(H2Provider.class).asEagerSingleton();
         install(new DataModule(scannerFactory, new DatabaseProvider()));
-        bind(DatabaseResources.class);
-        bind(TableResources.class);
+        bind(DatabaseScript.class).asEagerSingleton();
+        bind(DatabaseResources.class).to(DatabaseService.class);
     }
 }

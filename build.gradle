@@ -27,6 +27,9 @@ dependencies {
     compile ( logs.simple )
     compile ( data.h2 )
 
+    // security
+    //compile "org.jboss.resteasy:resteasy-oauth:${resteasyVersion}"
+
     //testCompile ( test.testng )
     testCompile ( governator.test )
     testCompile 'io.rest-assured:rest-assured:3.0.1'
