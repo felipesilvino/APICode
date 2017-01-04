@@ -12,7 +12,7 @@ public class PatientEntity {
     private String name;
     private Instant birthday;
 
-    private Link medicines;
+    private Link encounters;
 
     public Integer getId() {
         return id;
@@ -38,11 +38,11 @@ public class PatientEntity {
         this.birthday = birthday;
     }
 
-    public Link getMedicines() {
-        return medicines;
+    public Link getEncounters() {
+        return encounters;
     }
 
-    public void setMedicines(final Link medicines) {
-        this.medicines = medicines;
+    public void setEncounters(final Link encounters) {
+        this.encounters = encounters;
     }
 }
