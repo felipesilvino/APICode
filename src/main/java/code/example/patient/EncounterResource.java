@@ -22,4 +22,8 @@ public interface EncounterResource {
     @Path("{eid}")
     Map<String, Object> get(@PathParam("id") Integer idPatient, @PathParam("eid") Integer eid);
 
+    @PUT
+    @Path("{eid}/release")
+    void release(@PathParam("id") Integer idPatient, @PathParam("eid") Integer eid);
+
 }

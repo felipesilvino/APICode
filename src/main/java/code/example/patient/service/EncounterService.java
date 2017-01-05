@@ -7,6 +7,7 @@ import com.google.inject.persist.Transactional;
 import com.philips.app.data.DataQuery;
 import org.codejargon.fluentjdbc.api.mapper.Mappers;
 
+import javax.ws.rs.PathParam;
 import java.util.Collection;
 import java.util.Map;
 
@@ -34,5 +35,10 @@ public class EncounterService implements EncounterResource {
                 .namedParam("eid", eid)
                 .firstResult(Mappers.map())
                 .orElse(null);
+    }
+
+    @Override
+    public void release(@PathParam("id") Integer idPatient, @PathParam("eid") Integer eid) {
+        /// TODO... aws
     }
 }
