@@ -13,8 +13,11 @@ test {
     useJUnit()
 }
 
-dependencies {
+configurations {
+    all*.exclude group: 'javax.ws.rs', module: 'jsr311-api'
+}
 
+dependencies {
 
     compile ( philips.boot ) {
         exclude group: 'com.sun.jersey'
@@ -26,6 +29,12 @@ dependencies {
 
     compile ( logs.simple )
     compile ( data.h2 )
+
+    compile ( google.guice.thorwingproviders )
+
+    compile ( swagger.core )
+    compile ( swagger.jaxrs )
+    compile ( swagger.annotations )
 
     // security
     //compile "org.jboss.resteasy:resteasy-oauth:${resteasyVersion}"

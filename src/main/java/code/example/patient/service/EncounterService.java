@@ -38,7 +38,7 @@ public class EncounterService implements EncounterResource {
     }
 
     @Override
-    public void release(@PathParam("id") Integer idPatient, @PathParam("eid") Integer eid) {
+    public void release(@PathParam("id") final Integer idPatient, @PathParam("eid") final Integer eid) {
         /// TODO... aws
     }
 }
