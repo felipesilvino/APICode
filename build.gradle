@@ -13,8 +13,11 @@ test {
     useJUnit()
 }
 
-dependencies {
+configurations {
+    all*.exclude group: 'javax.ws.rs', module: 'jsr311-api'
+}
 
+dependencies {
 
     compile ( philips.boot ) {
         exclude group: 'com.sun.jersey'
@@ -23,15 +26,23 @@ dependencies {
     compile ( philips.commons )
     compile ( philips.data )
     compile ( philips.resteasy.core )
+    compile ( philips.security )
 
     compile ( logs.simple )
     compile ( data.h2 )
+
+    compile ( google.guice.thorwingproviders )
+
+    compile ( swagger.core )
+    compile ( swagger.jaxrs )
+    compile ( swagger.annotations )
 
     // security
     //compile "org.jboss.resteasy:resteasy-oauth:${resteasyVersion}"
 
     //testCompile ( test.testng )
-    testCompile ( governator.test )
+   // testCompile ( governator.test )
+    testCompile ( philips.test )
     testCompile 'io.rest-assured:rest-assured:3.0.1'
     testCompile 'io.rest-assured:json-path:3.0.1'
 

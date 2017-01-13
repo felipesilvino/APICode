@@ -1,11 +1,13 @@
 ext.google = [
     guava : "com.google.guava:guava:${guavaVersion}",
     guice : [
-        core      : "com.google.inject:guice:${guiceVersion}",
-        servlet   : "com.google.inject.extensions:guice-servlet:${guiceVersion}",
-        persist   : "com.google.inject.extensions:guice-persist:${guiceVersion}",
-        assisted  : "com.google.inject.extensions:guice-assistedinject:${guiceVersion}",
-        multibind : "com.google.inject.extensions:guice-multibindings:${guiceVersion}"
+        core              : "com.google.inject:guice:${guiceVersion}",
+        servlet           : "com.google.inject.extensions:guice-servlet:${guiceVersion}",
+        persist           : "com.google.inject.extensions:guice-persist:${guiceVersion}",
+        assisted          : "com.google.inject.extensions:guice-assistedinject:${guiceVersion}",
+        multibind         : "com.google.inject.extensions:guice-multibindings:${guiceVersion}",
+        thorwingproviders : "com.google.inject.extensions:guice-throwingproviders:${guiceVersion}",
+
     ]
 ]
 
@@ -36,8 +38,16 @@ ext.philips = [
 	commons    : "com.philips.app.tools:philips-commons:${philipsApplicationVersion}",
 	session    : "com.philips.app.tools:philips-session:${philipsApplicationVersion}",
 	data       : "com.philips.app.tools:philips-data:${philipsApplicationVersion}",
+	test       : "com.philips.app.tools:philips-test:${philipsApplicationVersion}",
 	resteasy   : [
 		core      : "com.philips.app.tools:philips-resteasy:${philipsApplicationVersion}",
 		multipart : "com.philips.app.tools:philips-resteasy-multipart:${philipsApplicationVersion}"
-	]
+	],
+	security   : "com.philips.app.security:philips-security-client:${philipsSecurityVersion}"
+]
+
+ext.swagger = [
+        core  : "io.swagger:swagger-core:${project.swaggerVersion}",
+        jaxrs : "io.swagger:swagger-jaxrs:${project.swaggerVersion}",
+        annotations: "io.swagger:swagger-annotations:${project.swaggerVersion}"
 ]

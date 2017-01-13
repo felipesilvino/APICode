@@ -3,8 +3,9 @@ package code.example.database;
 import code.example.GuiceModuleTest;
 import code.example.ServerRequest;
 import com.google.inject.Inject;
-import com.netflix.governator.guice.test.ModulesForTesting;
-import com.netflix.governator.guice.test.junit4.GovernatorJunit4ClassRunner;
+import com.philips.app.test.junit.ConfigForTesting;
+import com.philips.app.test.junit.ModulesForTesting;
+import com.philips.app.test.junit.PhilipsJunit4ClassRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -16,8 +17,9 @@ import static org.hamcrest.Matchers.*;
 /**
  * Created by aweise on 02/01/17.
  */
-@RunWith(GovernatorJunit4ClassRunner.class)
+@RunWith(PhilipsJunit4ClassRunner.class)
 @ModulesForTesting(GuiceModuleTest.class)
+@ConfigForTesting("/configuration.yml")
 public class DatabaseTest {
 
     @Inject
