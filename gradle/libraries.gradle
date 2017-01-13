@@ -38,6 +38,7 @@ ext.philips = [
 	commons    : "com.philips.app.tools:philips-commons:${philipsApplicationVersion}",
 	session    : "com.philips.app.tools:philips-session:${philipsApplicationVersion}",
 	data       : "com.philips.app.tools:philips-data:${philipsApplicationVersion}",
+	test       : "com.philips.app.tools:philips-test:${philipsApplicationVersion}",
 	resteasy   : [
 		core      : "com.philips.app.tools:philips-resteasy:${philipsApplicationVersion}",
 		multipart : "com.philips.app.tools:philips-resteasy-multipart:${philipsApplicationVersion}"

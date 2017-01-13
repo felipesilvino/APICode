@@ -26,6 +26,7 @@ dependencies {
     compile ( philips.commons )
     compile ( philips.data )
     compile ( philips.resteasy.core )
+    compile ( philips.security )
 
     compile ( logs.simple )
     compile ( data.h2 )
@@ -40,7 +41,8 @@ dependencies {
     //compile "org.jboss.resteasy:resteasy-oauth:${resteasyVersion}"
 
     //testCompile ( test.testng )
-    testCompile ( governator.test )
+   // testCompile ( governator.test )
+    testCompile ( philips.test )
     testCompile 'io.rest-assured:rest-assured:3.0.1'
     testCompile 'io.rest-assured:json-path:3.0.1'
 
